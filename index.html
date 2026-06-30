@@ -1,25 +1,121 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enrico Pierantoni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Georgia, serif;
-      max-width: 600px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #1a1a1a;
+    :root {
+      --ink: #0d0b0a;
+      --bleach: #e9e3d6;
+      --muted: #8c8478;
+      --hair: rgba(233, 227, 214, 0.14);
     }
-    h1 { font-weight: normal; letter-spacing: 1px; }
-    a { color: #1a1a1a; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--ink);
+      color: var(--bleach);
+      font-family: "Newsreader", Georgia, serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 14vh 28px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      opacity: 0;
+      animation: appear 1.8s ease-out 0.15s forwards;
+    }
+
+    .statement {
+      font-weight: 300;
+      font-size: 1.7rem;
+      line-height: 1.5;
+    }
+
+    .place {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 1.02rem;
+      font-weight: 300;
+    }
+
+    .label {
+      margin-top: 56px;
+      border-top: 1px solid var(--hair);
+    }
+    .label a {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 2px;
+      border-bottom: 1px solid var(--hair);
+      text-decoration: none;
+      color: var(--bleach);
+    }
+    .label .key {
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .label .val {
+      font-size: 1.02rem;
+      font-weight: 300;
+    }
+
+    .sign {
+      margin-top: 64px;
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: var(--bleach);
+    }
+
+    @keyframes appear {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      main { opacity: 1; animation: none; }
+    }
   </style>
 </head>
 <body>
-  <h1>Enrico Pierantoni</h1>
-  <p>Artista e indumenti dipinti a mano, decolorati e rielaborati.</p>
-  <p><a href="https://www.vinted.it">Vinted</a></p>
+  <main>
+    <p class="statement">One-off garments — hand-painted, bleached, and reworked by hand.</p>
+    <p class="place">Made in Tivoli, near Rome.</p>
+
+    <nav class="label">
+      <a href="https://www.vinted.it/member/244285596-enricopierantoni">
+        <span class="key">Vinted</span>
+        <span class="val">Shop the pieces</span>
+      </a>
+      <a href="https://www.depop.com/enricopierantoni/">
+        <span class="key">Depop</span>
+        <span class="val">@enricopierantoni</span>
+      </a>
+      <a href="https://www.instagram.com/enricopierantoni">
+        <span class="key">Instagram</span>
+        <span class="val">@enricopierantoni</span>
+      </a>
+      <a href="mailto:enricopierantoni777@gmail.com">
+        <span class="key">Email</span>
+        <span class="val">enricopierantoni777@gmail.com</span>
+      </a>
+    </nav>
+
+    <h1 class="sign">Enrico Pierantoni</h1>
+  </main>
 </body>
 </html>
