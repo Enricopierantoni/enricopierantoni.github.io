@@ -6,116 +6,84 @@
   <title>Enrico Pierantoni</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --ink: #0d0b0a;
-      --bleach: #e9e3d6;
-      --muted: #8c8478;
-      --hair: rgba(233, 227, 214, 0.14);
+    :root{
+      --brick:#bf5230;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      min-height:100vh;
+      background:url('sfondo.jpg.jpg') center center / cover no-repeat fixed #1a1a1a;
+      font-family:"Newsreader",Georgia,serif;
+      padding:9vh 26px 12vh;
+    }
+    .brick{
+      color:var(--brick);
+      text-shadow:
+        -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000,
+        -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000,
+        0 -1.5px 0 #000, 0 1.5px 0 #000,
+        -1.5px 0 0 #000, 1.5px 0 0 #000;
+    }
+    main{width:100%;max-width:560px;margin:0 auto;}
 
-    body {
-      background-color: var(--ink);
-      color: var(--bleach);
-      font-family: "Newsreader", Georgia, serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 14vh 28px;
-      -webkit-font-smoothing: antialiased;
-    }
+    .title{font-weight:500;font-size:1.9rem;line-height:1.35;}
+    .title .l2{display:block;padding-left:2em;}
+    .title .l3{display:block;padding-left:5em;margin-top:1.4em;}
 
-    main {
-      width: 100%;
-      max-width: 480px;
-      margin: 0 auto;
-      opacity: 0;
-      animation: appear 1.8s ease-out 0.15s forwards;
-    }
+    .mail{margin-top:48px;font-size:1.05rem;}
+    .mail a{color:var(--brick);text-decoration:none;}
 
-    .statement {
-      font-weight: 300;
-      font-size: 1.7rem;
-      line-height: 1.5;
+    .nl{margin-top:26px;max-width:330px;}
+    .nl label{display:block;font-size:1.05rem;margin-bottom:8px;}
+    .nl input[type=email]{
+      width:100%;
+      background:rgba(0,0,0,.45);
+      border:1.5px solid var(--brick);
+      color:var(--brick);
+      font-family:inherit;font-size:1rem;
+      padding:11px 12px;outline:none;
     }
-
-    .place {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 1.02rem;
-      font-weight: 300;
-    }
-
-    .label {
-      margin-top: 56px;
-      border-top: 1px solid var(--hair);
-    }
-    .label a {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 16px 2px;
-      border-bottom: 1px solid var(--hair);
-      text-decoration: none;
-      color: var(--bleach);
-    }
-    .label .key {
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-      font-size: 0.66rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .label .val {
-      font-size: 1.02rem;
-      font-weight: 300;
+    .nl input[type=email]::placeholder{color:var(--brick);opacity:.6;}
+    .nl input[type=submit]{
+      width:100%;margin-top:10px;
+      background:var(--brick);
+      border:1.5px solid #000;
+      color:#000;
+      font-family:inherit;font-size:1.05rem;font-weight:500;
+      padding:11px 12px;cursor:pointer;
     }
 
-    .sign {
-      margin-top: 64px;
-      font-weight: 400;
-      font-size: 1.15rem;
-      color: var(--bleach);
-    }
-
-    @keyframes appear {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      main { opacity: 1; animation: none; }
-    }
+    .links{margin-top:40px;display:flex;flex-direction:column;gap:14px;font-size:1.15rem;}
+    .links a{color:var(--brick);text-decoration:none;width:max-content;}
   </style>
 </head>
 <body>
   <main>
-    <p class="statement">One-off garments — hand-painted, bleached, and reworked by hand.</p>
-    <p class="place">Made in Tivoli, near Rome.</p>
+    <h1 class="title brick">
+      paintings archive
+      <span class="l2">and 1/1 custom garments</span>
+      <span class="l3">coming back soon</span>
+    </h1>
 
-    <nav class="label">
-      <a href="https://www.vinted.it/member/244285596-enricopierantoni">
-        <span class="key">Vinted</span>
-        <span class="val">Shop the pieces</span>
-      </a>
-      <a href="https://www.depop.com/enricopierantoni/">
-        <span class="key">Depop</span>
-        <span class="val">@enricopierantoni</span>
-      </a>
-      <a href="https://www.instagram.com/enricopierantoni">
-        <span class="key">Instagram</span>
-        <span class="val">@enricopierantoni</span>
-      </a>
-      <a href="mailto:enricopierantoni777@gmail.com">
-        <span class="key">Email</span>
-        <span class="val">enricopierantoni777@gmail.com</span>
-      </a>
+    <div class="mail"><a class="brick" href="mailto:enricopierantoni777@gmail.com">enricopierantoni777@gmail.com</a></div>
+
+    <form class="nl embeddable-buttondown-form"
+          action="https://buttondown.com/api/emails/embed-subscribe/Enricopierantoni"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://buttondown.com/Enricopierantoni','popupwindow')">
+      <label class="brick" for="bd-email">newsletter</label>
+      <input class="brick" type="email" name="email" id="bd-email" placeholder="you@example.com" required>
+      <input type="submit" value="Subscribe">
+    </form>
+
+    <nav class="links">
+      <a class="brick" href="https://www.vinted.it/member/244285596-enricopierantoni">buy on Vinted</a>
+      <a class="brick" href="https://www.instagram.com/enricopierantoni">instagram</a>
+      <a class="brick" href="https://www.depop.com/enricopierantoni/">depop</a>
     </nav>
-
-    <h1 class="sign">Enrico Pierantoni</h1>
   </main>
 </body>
 </html>
