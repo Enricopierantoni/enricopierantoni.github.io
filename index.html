@@ -20,7 +20,7 @@
     }
     a{color:#fff;text-decoration:none;}
 
-    /* TITOLO: in alto a destra, stretto */
+    /* TITOLO: in alto a destra */
     .title{
       position:absolute;
       top:9vh;
@@ -38,19 +38,25 @@
       margin-top:.5em;
     }
 
-    /* NEWSLETTER + EMAIL: pi첫 in basso, a destra */
+    /* COMMISSIONS + NEWSLETTER */
     .block{
       position:absolute;
       top:58%;
       right:20px;
       width:46%;
     }
-    .mail{
+    .comm{
       font-size:.68rem;
       font-weight:300;
       margin-bottom:18px;
-      white-space:nowrap;
+      line-height:1.6;
     }
+    .comm .lbl{
+      display:block;
+      opacity:.85;
+    }
+    .comm a{white-space:nowrap;}
+
     .nl label{
       display:block;
       font-size:.6rem;
@@ -93,11 +99,14 @@
 <body>
   <h1 class="title">
     Paintings and custom clothing
-    <em>Archive and commissions returning soon</em>
+    <em>Archive returning soon</em>
   </h1>
 
   <div class="block">
-    <div class="mail"><a href="mailto:enricopierantoni777@gmail.com">enricopierantoni777@gmail.com</a></div>
+    <div class="comm">
+      <span class="lbl">For commissions:</span>
+      <a href="mailto:enricopierantoni777@gmail.com">enricopierantoni777@gmail.com</a>
+    </div>
 
     <form class="nl embeddable-buttondown-form"
           action="https://buttondown.com/api/emails/embed-subscribe/Enricopierantoni"
