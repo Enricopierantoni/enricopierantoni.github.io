@@ -6,84 +6,107 @@
   <title>Enrico Pierantoni</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --brick:#bf5230;
-    }
     *{margin:0;padding:0;box-sizing:border-box;}
     body{
       min-height:100vh;
-      background:url('sfondo.jpg.jpg') center center / cover no-repeat fixed #1a1a1a;
-      font-family:"Newsreader",Georgia,serif;
-      padding:9vh 26px 12vh;
+      background:url('sfondo.jpg.jpg') center center / cover no-repeat #1a1a1a;
+      font-family:"Inter",-apple-system,Helvetica,sans-serif;
+      color:#fff;
+      display:flex;flex-direction:column;
+      justify-content:space-between;
+      padding:7vh 22px 7vh;
     }
-    .brick{
-      color:var(--brick);
-      text-shadow:
-        -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000,
-        -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000,
-        0 -1.5px 0 #000, 0 1.5px 0 #000,
-        -1.5px 0 0 #000, 1.5px 0 0 #000;
+    a{color:#fff;text-decoration:none;}
+
+    .right{
+      width:58%;
+      margin-left:auto;
+      text-align:left;
     }
-    main{width:100%;max-width:560px;margin:0 auto;}
+    .title{
+      font-size:.95rem;
+      font-weight:400;
+      line-height:1.5;
+      letter-spacing:.01em;
+    }
+    .title em{
+      display:block;
+      font-style:normal;
+      font-weight:300;
+      opacity:.85;
+      margin-top:.5em;
+    }
 
-    .title{font-weight:500;font-size:1.9rem;line-height:1.35;}
-    .title .l2{display:block;padding-left:2em;}
-    .title .l3{display:block;padding-left:5em;margin-top:1.4em;}
+    .mail{
+      margin-top:26px;
+      font-size:.72rem;
+      font-weight:300;
+      letter-spacing:.02em;
+    }
 
-    .mail{margin-top:48px;font-size:1.05rem;}
-    .mail a{color:var(--brick);text-decoration:none;}
-
-    .nl{margin-top:26px;max-width:330px;}
-    .nl label{display:block;font-size:1.05rem;margin-bottom:8px;}
+    .nl{margin-top:22px;}
+    .nl label{
+      display:block;
+      font-size:.62rem;
+      font-weight:400;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      opacity:.9;
+      margin-bottom:7px;
+    }
     .nl input[type=email]{
       width:100%;
-      background:rgba(0,0,0,.45);
-      border:1.5px solid var(--brick);
-      color:var(--brick);
-      font-family:inherit;font-size:1rem;
-      padding:11px 12px;outline:none;
+      background:rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.55);
+      color:#fff;
+      font-family:inherit;font-size:.75rem;font-weight:300;
+      padding:8px 9px;outline:none;
     }
-    .nl input[type=email]::placeholder{color:var(--brick);opacity:.6;}
+    .nl input[type=email]::placeholder{color:rgba(255,255,255,.5);}
     .nl input[type=submit]{
-      width:100%;margin-top:10px;
-      background:var(--brick);
-      border:1.5px solid #000;
-      color:#000;
-      font-family:inherit;font-size:1.05rem;font-weight:500;
-      padding:11px 12px;cursor:pointer;
+      width:100%;margin-top:7px;
+      background:rgba(255,255,255,.92);
+      border:none;
+      color:#111;
+      font-family:inherit;font-size:.7rem;font-weight:500;
+      letter-spacing:.1em;text-transform:uppercase;
+      padding:9px;cursor:pointer;
     }
 
-    .links{margin-top:40px;display:flex;flex-direction:column;gap:14px;font-size:1.15rem;}
-    .links a{color:var(--brick);text-decoration:none;width:max-content;}
+    .links{
+      display:flex;flex-direction:column;gap:9px;
+      font-size:.78rem;font-weight:300;
+      letter-spacing:.02em;
+      width:max-content;
+    }
   </style>
 </head>
 <body>
-  <main>
-    <h1 class="title brick">
-      paintings archive
-      <span class="l2">and 1/1 custom garments</span>
-      <span class="l3">coming back soon</span>
+  <div class="right">
+    <h1 class="title">
+      Paintings and custom clothing
+      <em>Archive and commissions returning soon</em>
     </h1>
 
-    <div class="mail"><a class="brick" href="mailto:enricopierantoni777@gmail.com">enricopierantoni777@gmail.com</a></div>
+    <div class="mail"><a href="mailto:enricopierantoni777@gmail.com">enricopierantoni777@gmail.com</a></div>
 
     <form class="nl embeddable-buttondown-form"
           action="https://buttondown.com/api/emails/embed-subscribe/Enricopierantoni"
           method="post"
           target="popupwindow"
           onsubmit="window.open('https://buttondown.com/Enricopierantoni','popupwindow')">
-      <label class="brick" for="bd-email">newsletter</label>
-      <input class="brick" type="email" name="email" id="bd-email" placeholder="you@example.com" required>
+      <label for="bd-email">Newsletter</label>
+      <input type="email" name="email" id="bd-email" placeholder="you@example.com" required>
       <input type="submit" value="Subscribe">
     </form>
+  </div>
 
-    <nav class="links">
-      <a class="brick" href="https://www.vinted.it/member/244285596-enricopierantoni">buy on Vinted</a>
-      <a class="brick" href="https://www.instagram.com/enricopierantoni">instagram</a>
-      <a class="brick" href="https://www.depop.com/enricopierantoni/">depop</a>
-    </nav>
-  </main>
+  <nav class="links">
+    <a href="https://www.vinted.it/member/244285596-enricopierantoni">buy on Vinted</a>
+    <a href="https://www.instagram.com/enricopierantoni">instagram</a>
+    <a href="https://www.depop.com/enricopierantoni/">depop</a>
+  </nav>
 </body>
 </html>
