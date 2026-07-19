@@ -3,69 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archive — Enrico Pierantoni</title>
+  <title>Enrico Pierantoni</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
+    html,body{height:100%;}
     body{
-      background:#0e0e0e;
-      color:#fff;
-      font-family:"Inter",-apple-system,Helvetica,sans-serif;
-      padding:7vh 22px 14vh;
-    }
-    a{color:#2b2b2b;text-decoration:none;}
-
-    header{
-      max-width:760px;margin:0 auto 10vh;
-      display:flex;justify-content:space-between;align-items:baseline;gap:20px;
-    }
-    .back{
-      font-size:.72rem;font-weight:500;color:#2b2b2b;
-      text-shadow:0 0 2px rgba(255,255,255,.5);
-    }
-    h1{
-      font-size:.64rem;font-weight:500;color:#fff;
-      letter-spacing:.16em;text-transform:uppercase;
-    }
-
-    .works{max-width:760px;margin:0 auto;}
-
-    .work{margin-bottom:12vh;}
-    .work img,.work video{
-      width:100%;height:auto;display:block;
+      position:relative;
+      min-height:100vh;
       background:#1a1a1a;
+      font-family:"Inter",-apple-system,Helvetica,sans-serif;
+      color:#fff;
+      overflow-x:hidden;
     }
-    .caption{
-      margin-top:14px;
-      font-size:.8rem;font-weight:500;
-      line-height:1.7;
-      color:#2b2b2b;
-      text-shadow:
-        -1px -1px 0 #000, 1px -1px 0 #000,
-        -1px 1px 0 #000, 1px 1px 0 #000,
-        0 0 3px rgba(0,0,0,.8);
+    a{color:#fff;text-decoration:none;}
+
+    /* VIDEO DI SFONDO */
+    #bg{
+      position:fixed;
+      top:0;left:0;
+      width:100%;height:100%;
+      object-fit:cover;
+      z-index:-1;
     }
-    .caption .d{font-weight:400;}
+
+    /* TITOLO: in alto a destra */
+    .title{
+      position:absolute;
+      top:9vh;
+      right:20px;
+      width:46%;
+      font-size:.9rem;
+      font-weight:400;
+      line-height:1.5;
+    }
+    .title em{
+      display:block;
+      font-style:normal;
+      font-weight:300;
+      opacity:.85;
+      margin-top:.5em;
+    }
+
+    /* COMMISSIONS + NEWSLETTER */
+    .block{
+      position:absolute;
+      top:58%;
+      right:20px;
+      width:46%;
+    }
+    .comm{
+      font-size:.68rem;
+      font-weight:300;
+      margin-bottom:18px;
+      line-height:1.6;
+    }
+    .comm .lbl{display:block;opacity:.85;}
+    .comm a{white-space:nowrap;}
+
+    .nl label{
+      display:block;
+      font-size:.6rem;
+      font-weight:400;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      opacity:.9;
+      margin-bottom:6px;
+    }
+    .nl input[type=email]{
+      width:100%;
+      background:rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.55);
+      color:#fff;
+      font-family:inherit;font-size:.72rem;font-weight:300;
+      padding:7px 8px;outline:none;
+    }
+    .nl input[type=email]::placeholder{color:rgba(255,255,255,.5);}
+    .nl input[type=submit]{
+      width:100%;margin-top:6px;
+      background:rgba(255,255,255,.92);
+      border:none;
+      color:#111;
+      font-family:inherit;font-size:.65rem;font-weight:500;
+      letter-spacing:.1em;text-transform:uppercase;
+      padding:8px;cursor:pointer;
+    }
+
+    /* LINK: in fondo a sinistra */
+    .links{
+      position:absolute;
+      left:20px;
+      bottom:6vh;
+      display:flex;flex-direction:column;gap:8px;
+      font-size:.75rem;font-weight:300;
+      width:max-content;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Archive</h1>
-    <a class="back" href="/">← back</a>
-  </header>
+  <video id="bg" src="opera1.mp4.mp4" autoplay loop muted playsinline></video>
 
-  <div class="works">
+  <h1 class="title">
+    Paintings and custom clothing
+    <em>Archive returning soon</em>
+  </h1>
 
-    <div class="work">
-      <video src="opera1.mp4.mp4" autoplay loop muted playsinline></video>
-      <div class="caption">
-        <span class="t">Titolo dell'opera</span><br>
-        <span class="d">2026 — Datamosh / video — 00:12</span>
-      </div>
+  <div class="block">
+    <div class="comm">
+      <span class="lbl">For commissions:</span>
+      <a href="mailto:enricopierantoni777@gmail.com">enricopierantoni777@gmail.com</a>
     </div>
 
+    <form class="nl embeddable-buttondown-form"
+          action="https://buttondown.com/api/emails/embed-subscribe/Enricopierantoni"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://buttondown.com/Enricopierantoni','popupwindow')">
+      <label for="bd-email">Newsletter</label>
+      <input type="email" name="email" id="bd-email" placeholder="you@example.com" required>
+      <input type="submit" value="Subscribe">
+    </form>
   </div>
+
+  <nav class="links">
+    <a href="https://www.vinted.it/member/244285596-enricopierantoni">buy on Vinted</a>
+    <a href="https://www.instagram.com/enricopierantoni">instagram</a>
+    <a href="https://www.depop.com/enricopierantoni/">depop</a>
+  </nav>
 </body>
 </html>
