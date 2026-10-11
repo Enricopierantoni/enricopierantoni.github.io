@@ -50,37 +50,14 @@ footer{padding:18px 14px 26px;color:var(--mute);font-size:11px;border-top:1px so
 <script>
 /* EDIT HERE: title, price, sold:true to mark as sold, stripe:"Stripe payment link" (if empty, the button opens an Instagram message). */
 const OPERE=[
-{id:"opera-1",titolo:"Untitled I",prezzo:65,img:["opera-1.jpg"],stripe:"",sold:false,tecnica:"Ink on paper",misure:"21 x 29.7 cm (A4)"},
-{id:"opera-2",titolo:"Untitled II",prezzo:65,img:["opera-2.jpg"],stripe:"",sold:false,tecnica:"Ink on paper",misure:"21 x 29.7 cm (A4)"},
-{id:"opera-3",titolo:"Untitled III",prezzo:65,img:["opera-3.jpg"],stripe:"",sold:false,tecnica:"Ink on paper",misure:"21 x 29.7 cm (A4)"},
-{id:"opera-4",titolo:"Untitled IV",prezzo:65,img:["opera-4.jpg"],stripe:"",sold:false,tecnica:"Ink on paper",misure:"21 x 29.7 cm (A4)"},
-{id:"opera-5",titolo:"Untitled V",prezzo:90,img:["opera-5.jpg"],stripe:"",sold:false,tecnica:"Ink on paper",misure:"21 x 29.7 cm (A4)"}
+{id:"opera-1",titolo:"Untitled",prezzo:65,img:["opera-1.jpg"],stripe:"",sold:false,tecnica:"Ink on paper",misure:"21 x 29.7 cm (A4)"},
+{id:"opera-2",titolo:"Untitled",prezzo:65,img:["opera-2.jpg"],stripe:"",sold:false,tecnica:"Ink on paper",misure:"21 x 29.7 cm (A4)"},
+{id:"opera-3",titolo:"Untitled",prezzo:65,img:["opera-3.jpg"],stripe:"",sold:false,tecnica:"Ink on paper",misure:"21 x 29.7 cm (A4)"},
+{id:"opera-4",titolo:"Untitled",prezzo:65,img:["opera-4.jpg"],stripe:"",sold:false,tecnica:"Ink on paper",misure:"21 x 29.7 cm (A4)"},
+{id:"opera-5",titolo:"Untitled",prezzo:90,img:["opera-5.jpg"],stripe:"",sold:false,tecnica:"Ink on paper",misure:"21 x 29.7 cm (A4)"}
 ];
 const IG="enricopier_";
 const app=document.getElementById('app');
 const nav=document.getElementById('nav');
 document.getElementById('open').onclick=()=>nav.classList.add('open');
-document.getElementById('close').onclick=()=>nav.classList.remove('open');
-nav.onclick=e=>{if(e.target.tagName==='A')nav.classList.remove('open')};
-function bg(o,i){return `background-image:url('${o.img[i]}')`}
-function fmt(n){return '€'+n.toFixed(2)}
-function shop(){
-app.innerHTML='<div class="grid">'+OPERE.map(o=>`<a class="card ${o.sold?'sold':''}" href="#/${o.id}"><div class="a4" style="${bg(o,0)}"></div><h2>${o.titolo}</h2><div class="price">${fmt(o.prezzo)}${o.sold?' Sold':''}</div></a>`).join('')+'</div>';
-}
-function opera(id){
-const o=OPERE.find(x=>x.id===id);if(!o)return shop();
-app.innerHTML=`<div class="page"><a class="back" href="#/">&lsaquo; Back to shop</a>
-<div class="a4" id="main" style="${bg(o,0)}"></div>
-${o.img.length>1?`<div class="thumbs">${o.img.map((_,i)=>`<div class="a4 ${i?'':'on'}" data-i="${i}" style="${bg(o,i)}"></div>`).join('')}</div>`:'<div style="height:16px"></div>'}
-<h1>${o.titolo}</h1><p>${fmt(o.prezzo)}</p>
-<p class="small">Shipping calculated at checkout.</p>
-${o.sold?'<span class="buy" aria-disabled="true">Sold</span>':(o.stripe?`<a class="buy" href="${o.stripe}">Buy</a>`:`<a class="buy" href="https://ig.me/m/${IG}">Message me to buy</a>`)}
-<p>${o.tecnica}</p><p>${o.misure}</p><p>Ships rolled up, without frame.</p>
-<p class="small">Final sale. Each original work is one of a kind, so returns are not accepted.</p></div>`;
-document.querySelectorAll('.thumbs .a4').forEach(t=>t.onclick=()=>{document.getElementById('main').setAttribute('style',t.getAttribute('style'));document.querySelectorAll('.thumbs .a4').forEach(x=>x.classList.remove('on'));t.classList.add('on')});
-}
-function route(){const h=location.hash.replace('#/','');window.scrollTo(0,0);h?opera(h):shop()}
-addEventListener('hashchange',route);route();
-</script>
-</body>
-</html>
+document.getElementById('close').
